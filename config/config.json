@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "{{DB_USERNAME}}",
-    "password": "{{DB_PASSWORD}}",
-    "database": "{{DB_DATABASE}}",
+    "username": "root",
+    "password": "password",
+    "database": "bd",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
@@ -10,7 +10,7 @@
   "test": {
     "username": "root",
     "password": "password",
-    "database": "database_test",
+    "database": "bd",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
@@ -18,7 +18,7 @@
   "production": {
     "username": "root",
     "password": "password",
-    "database": "database_production",
+    "database": "bd",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false

@@ -35,10 +35,7 @@ async function runService(serviceClass, { context = {}, params = {}, logger = co
 
 
 function makeServiceRunner(serviceClass, paramsBuilder, contexBuilder, logger = consoleLogger) {
-  console.log("function -- makeServiceRunner ServiceUtils");
     return async function serviceRunner(req, res) {
-      console.log("function -- makeServiceRunner ServiceUtils serviceRunner");
-
         const resultPromise = runService(serviceClass, {
             logger,
             params  : paramsBuilder(req, res),

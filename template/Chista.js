@@ -22,8 +22,6 @@ export default class Chista {
         contextBuilder = this.defaultContextBuilder,
         logger         = this.defaultLogger
     ) {
-      console.log("function --makeServiceRunner(Chista)");
-        console.log("serviceClass\n " + serviceClass + "\nparamsBuilder\n " + paramsBuilder + "\ncontextBuilder\n " + contextBuilder + "\nlogger\n" + logger);
         return serviceUtils.makeServiceRunner(serviceClass, paramsBuilder, contextBuilder, logger);
     }
 
