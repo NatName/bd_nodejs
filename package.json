@@ -1,11 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "backend for angular",
-  "main": "app.js",
+  "description": "backend for react",
   "scripts": {
-    "build": "webpack --mode development",
-    "start": "nodemon --exec babel-node app.js"
+    "nodemon": "cross-env MODE=development nodemon runner.js",
+    "migration:dev": "sequelize db:migrate --env development",
+    "migration:rollback:dev": "sequelize db:migrate:undo --env development"
   },
   "author": "Ruslan",
   "license": "ISC",
@@ -17,12 +17,14 @@
     "body-parser": "^1.19.0",
     "bunyan": "^1.8.12",
     "cls-hooked": "^4.2.2",
+    "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "dotenv-defaults": "^1.0.2",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-jwt": "^5.3.1",
+    "fingerprintjs2": "^2.1.0",
     "json-pointer": "^0.6.0",
     "jsonwebtoken": "^8.5.1",
     "livr": "^2.3.0",
@@ -47,7 +49,9 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.3.1",
     "babel-eslint": "^9.0.0",
-    "babel-plugin-add-module-exports": "^0.2.1"
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "cross-env": "^6.0.3",
+    "pm2": "^4.2.1"
   },
   "ava": {
     "require": [

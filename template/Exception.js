@@ -8,7 +8,6 @@ export default class Exception extends Error {
         if (!data.code) throw new Error('MESSAGE_REQUIRED');
 
         const fields = pointer.dict(data.fields);
-
         this.fields = rename(fields, str => {
             return str.substr(1);
         });

@@ -3,12 +3,7 @@ import Exception from './Exception';
 import consoleLogger from './consoleLogger';
 
 async function runService(serviceClass, { context = {}, params = {}, logger = consoleLogger }) {
-  console.log("function tunService -ServiceUtils");
-  console.log("params ");
-  console.log(params);
     function logRequest(type, result, startTime) {
-        console.log("function logRequest");
-        console.log(result);
         logger(type, {
             service : serviceClass.name,
             runtime : Date.now() - startTime,
@@ -20,7 +15,6 @@ async function runService(serviceClass, { context = {}, params = {}, logger = co
 
     try {
         const result = await new serviceClass({ context }).run(params);
-        console.log("result " + result);
         logRequest('info', JSON.stringify(result), startTime);
 
         return result;
